@@ -105,7 +105,7 @@ diagnosticMode:
 image:
   registry: docker.io
   repository: bitnami/postgresql
-  tag: 16.3.0-debian-12-r16
+  tag: latest
   digest: ""
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -134,16 +134,16 @@ auth:
   enablePostgresUser: true
   ## @param auth.postgresPassword Password for the "postgres" admin user. Ignored if `auth.existingSecret` is provided
   ##
-  postgresPassword: ""
+  postgresPassword: "password"
   ## @param auth.username Name for a custom user to create
   ##
-  username: ""
+  username: "sa"
   ## @param auth.password Password for the custom user to create. Ignored if `auth.existingSecret` is provided
   ##
-  password: ""
+  password: "password"
   ## @param auth.database Name for a custom database to create
   ##
-  database: ""
+  database: "kc"
   ## @param auth.replicationUsername Name of the replication user
   ##
   replicationUsername: repl_user
